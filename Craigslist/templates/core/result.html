@@ -1,65 +1,24 @@
 <div class="container">
-  <h2>Result...</h2>
+  <h2>Result:</h2>
   <br />
 </div>
 <br />
-{{content_data}}
 <br />
 <div class="row">
+  {% for dat in content_data %}
   <div class="col s12 m4 l4">
     <div class="card hoverable">
       <div class="card-image">
-        <img src="https://imgur.com/tr7XKUV.png" />
-        <span class="card-title">Card Title</span>
+        <img src="{{dat.image}}" />
+        <span class="card-title">{{dat.title}}</span>
       </div>
       <div class="card-content">
-        <p>
-          I am a very simple card. I am good at containing small bits of
-          information. I am convenient because I require little markup to use
-          effectively.
-        </p>
+        <p>{{dat.body | escape | safe}}</p>
       </div>
       <div class="card-action">
-        <a href="#">This is a link</a>
+        <a href="{{dat.url}}">This is a link</a>
       </div>
     </div>
   </div>
-
-  <div class="col s12 m4 l4">
-    <div class="card hoverable">
-      <div class="card-image">
-        <img src="https://imgur.com/tr7XKUV.png" />
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <p>
-          I am a very simple card. I am good at containing small bits of
-          information. I am convenient because I require little markup to use
-          effectively.
-        </p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col s12 m4 l4">
-    <div class="card hoverable">
-      <div class="card-image">
-        <img src="https://imgur.com/tr7XKUV.png" />
-        <span class="card-title">Card Title</span>
-      </div>
-      <div class="card-content">
-        <p>
-          I am a very simple card. I am good at containing small bits of
-          information. I am convenient because I require little markup to use
-          effectively.
-        </p>
-      </div>
-      <div class="card-action">
-        <a href="#">This is a link</a>
-      </div>
-    </div>
-  </div>
+  {% endfor %}
 </div>
