@@ -1,8 +1,8 @@
 from core.models import Search
-from django.forms import ModelForm
+from django import forms
 
 
-class SearchForm(ModelForm):
+class SearchForm(forms.ModelForm):
     class Meta:
         model = Search
         fields = ('search',)
