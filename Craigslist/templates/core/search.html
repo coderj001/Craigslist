@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<!-- title area -->
+{% block title %} Search {% endblock title %}
+<!-- content area -->
+{% block content %}
+<!-- background  -->
+{% include 'core/slogan.html' %}
+<div class="center">
+  <h2>Search..</h2>
+  <from action="" method="">
+    <!-- vuln -->
+    {% csrf_token %}
+    <!-- check -->
+    {% if forms %}
+    <!-- django form -->
+    {{ forms }}
+    <!-- end checked -->
+    {% endif %}
+  </from>
+</div>
+<br />
+<br />
+<br />
+{% endblock content %}

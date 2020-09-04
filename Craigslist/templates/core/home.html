@@ -3,5 +3,14 @@
 {% block title %} Home {% endblock title %}
 <!-- content area -->
 {% block content %}
-<h1>Homepage</h1>
+<!-- background -->
+{% include 'core/slogan.html' %}
+<!-- search button -->
+<div class="center">
+  <a
+    class="waves-effect waves-light btn btn-large purple darken-2"
+    href="{% url 'core:new-search' %}"
+    ><i class="material-icons left">search</i>SEARCH</a
+  >
+</div>
 {% endblock content %}
