@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "3416065fe3f7679eb784719bedbf3f0c8888a78d12cbd981df68bd28dae15af9"
+            "sha256": "6ef346364bc2fc381e4f2a77dddb3c9235f4870bb130565448159cb635220391"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -63,11 +63,19 @@
         },
         "django-extensions": {
             "hashes": [
-                "sha256:0ede618f3d933317737406c979753bb91436c3b3e93a452638a1483b624aa89d",
-                "sha256:b49388a943368417d4c203d51866ca4ffe3011bb240679558521762c4b452b8a"
+                "sha256:a67747508ec39583892fbddf57e0b66b3f332a885ef5520698bc2e1cb351955a",
+                "sha256:c7c2ca48ccc2ecc4427c908cd3a6dc114fc7534092de51209b02f84ccafe648b"
             ],
             "index": "pypi",
-            "version": "==3.0.7"
+            "version": "==3.0.8"
+        },
+        "gunicorn": {
+            "hashes": [
+                "sha256:1904bb2b8a43658807108d59c3f3d56c2b6121a701161de0ddf9ad140073c626",
+                "sha256:cd4a810dd51bf497552cf3f863b575dabd73d6ad6a91075b65936b151cbf4f9c"
+            ],
+            "index": "pypi",
+            "version": "==20.0.4"
         },
         "idna": {
             "hashes": [
@@ -142,11 +150,11 @@
         },
         "django-extensions": {
             "hashes": [
-                "sha256:0ede618f3d933317737406c979753bb91436c3b3e93a452638a1483b624aa89d",
-                "sha256:b49388a943368417d4c203d51866ca4ffe3011bb240679558521762c4b452b8a"
+                "sha256:a67747508ec39583892fbddf57e0b66b3f332a885ef5520698bc2e1cb351955a",
+                "sha256:c7c2ca48ccc2ecc4427c908cd3a6dc114fc7534092de51209b02f84ccafe648b"
             ],
             "index": "pypi",
-            "version": "==3.0.7"
+            "version": "==3.0.8"
         },
         "flake8": {
             "hashes": [
@@ -173,11 +181,11 @@
         },
         "isort": {
             "hashes": [
-                "sha256:0906e0e7092e060c05de709ad172e1ec1b26aa27fdd4e8093f257890cd881d18",
-                "sha256:8103bc070d9258fe97e82470cb30f0e4b730e94c44ac81ebae32b05d5a6c87ea"
+                "sha256:92533892058de0306e51c88f22ece002a209dc8e80288aa3cec6d443060d584f",
+                "sha256:a200d47b7ee8b7f7d0a9646650160c4a51b6a91a9413fd31b1da2c4de789f5d3"
             ],
             "markers": "python_version >= '3.6' and python_version < '4.0'",
-            "version": "==5.5.0"
+            "version": "==5.5.1"
         },
         "jedi": {
             "hashes": [

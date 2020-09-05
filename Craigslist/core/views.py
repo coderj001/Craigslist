@@ -23,13 +23,13 @@ def new_search(request):
         return render(request,'core/search.html',context={'forms':forms})
 
 def extrat_link(url):
-    res=requests.get(url)
-    html_doc=res.content
+    res = requests.get(url)
+    html_doc = res.content
     soup = BeautifulSoup(html_doc, 'html.parser')
-    img=soup.find('img')
-    head=soup.find('span',{'id':'titletextonly'})
-    body=soup.find('section',{'id':'postingbody'})
-    return {'head':head.string,'img':img['src'],'body':body.text[:30]}
+    img = soup.find('img')
+    head = soup.find('span', {'id':'titletextonly'})
+    body = soup.find('section', {'id':'postingbody'})
+    return {'head':head.string, 'img':img['src'], 'body':body.text[18:130]}
 
 def searching(query):
     BASE_URL='https://huntsville.craigslist.org/search/sss?query={}'.format(requests.compat.quote_plus(query))
@@ -37,10 +37,11 @@ def searching(query):
     html_doc=res.content
     soup = BeautifulSoup(html_doc, 'html.parser')
     rows=soup.find_all('li',{'class':'result-row'})
-    if len(rows) > 30:
-        rows=rows[:120]
+    count=0
     data_list=[]
     for row in rows:
+        if count >=20:
+            break
         try:
             atag=row.find('a')
             link=atag['href']
@@ -51,6 +52,7 @@ def searching(query):
             _data['body']=var['body']
             _data['url']=link
             data_list.append(_data)
+            count=count+1
         except Exception as e:
             print(e)
             continue
