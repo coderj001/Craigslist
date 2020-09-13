@@ -28,3 +28,10 @@ This application is follow up of tutorials. Application scrap a [Craigslist.org]
 2. Install requirements `pip install requirements.txt` or `pipenv install`
 3. Run migrations `./manage.py makemigations` and `./manage.py migrate`
 4. `./manage.py runserver` app should be up and running
+
+```sh
+pip install -r requirements.txt
+python manage.py makemigations
+python manage.py migrate
+python manage.py runserver
+```
