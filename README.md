@@ -1,4 +1,4 @@
-# Craigslist Projoct (Django)
+# Craigslist Project (Django)
 
 ## Table of Contents
 
