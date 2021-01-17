@@ -1,14 +1,13 @@
 import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TEMP_DIR = os.path.join(BASE_DIR,'templates')
+TEMP_DIR = os.path.join(BASE_DIR, 'templates')
 
 SECRET_KEY = os.environ['secret_key']
 
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-
 
 
 INSTALLED_APPS = [
@@ -85,4 +84,4 @@ USE_L10N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS=(os.path.join(BASE_DIR,'static'),)
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)

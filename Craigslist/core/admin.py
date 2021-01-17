@@ -4,7 +4,8 @@ from django_extensions.admin import ForeignKeyAutocompleteAdmin
 
 
 class SearchAdmin(ForeignKeyAutocompleteAdmin):
-    fields=('id','search','created')
-    list_display=('search','created')
+    fields = ('id', 'search', 'created')
+    list_display = ('search', 'created')
 
-admin.site.register(Search,SearchAdmin)
+
+admin.site.register(Search, SearchAdmin)
