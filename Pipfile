@@ -10,13 +10,14 @@ ipython = "*"
 pylint-django = "*"
 
 [packages]
-django = "==3.0.0"
+Django = "==3.1.0"
 django-extensions = "*"
 requests = "*"
 bs4 = "*"
 gunicorn = "*"
 aiohttp = "*"
 ipdb = "*"
+django = "*"
 
 [requires]
 python_version = "3.8"

@@ -1,4 +1,5 @@
 import asyncio
+import logging
 import aiohttp
 from bs4 import BeautifulSoup
 
@@ -20,7 +21,7 @@ async def extLink(session, url):
         }
         return DATA
     except Exception as e:
-        print(e, f"URL: {url}")
+        logging.error(f'Error: {e}, URL: {url}')
 
 
 async def searching(query):
@@ -29,7 +30,7 @@ async def searching(query):
         async with session.get(url) as res:
             html_doc = await res.read()
         soup = BeautifulSoup(html_doc.decode('utf-8'), 'html.parser')
-        rows = soup.findAll('li', {'class': 'result-row'})
+        rows = soup.findAll('li', {'class': 'result-row'}, limit=20)
         herfs = list()
         for row in rows:
             try:
