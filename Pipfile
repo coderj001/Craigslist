@@ -6,7 +6,6 @@ verify_ssl = true
 [dev-packages]
 django-extensions = "*"
 pylint = "*"
-flake8 = "*"
 ipython = "*"
 pylint-django = "*"
 
@@ -16,6 +15,8 @@ django-extensions = "*"
 requests = "*"
 bs4 = "*"
 gunicorn = "*"
+aiohttp = "*"
+ipdb = "*"
 
 [requires]
 python_version = "3.8"
